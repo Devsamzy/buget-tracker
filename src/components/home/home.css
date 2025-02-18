@@ -1,0 +1,187 @@
+.home header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.home .uimg,.menu{
+    width: 40px;
+    height: 40px;
+}
+.home .uimg{
+    border-radius: 50%;
+    padding: 3px;
+    background-color: rgb(218, 218, 218);
+}
+.home .menu{
+    border-radius: 100px;
+    display: flex;
+    aspect-ratio: 1/1;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 3px 1.5px #94949488;
+}
+.home .menu .nav{
+    height: 10px;
+    width: 18px;
+    border-top: 2.5px #333 solid;
+    border-bottom: 2.5px #333 solid;
+
+}
+.home .body .intro{
+    font-family: sofia;
+    font-size: 60px;
+    font-weight: 900;
+    padding: 0px 30px;
+    color: #00155c;
+}
+.home .body .tasks{
+    list-style: none;
+    /* background: #00218f; */
+    padding: 30px 10px;
+    margin: 30px 0px;
+    justify-content: space-around;
+    align-items: center;
+}
+.home .body .tasks .head{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.home .body .tasks .head li{
+    font-size: 15px;
+    color: #2e2e2e;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    font-family: sofia;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* font-family: 'Courier New', Courier, monospace; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: head2;
+    font-weight: 600;
+    letter-spacing: 3px;
+    transition: 0.1s ease-in;
+    transition-delay: -0s;
+    cursor: pointer;
+    
+}
+.home .body .tasks .head .task.active{
+    background-color: orangered;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 100px;
+}
+.home .body .taskcards{
+    display: flex;
+    gap: 20px;
+    width: 95vw;
+    padding-left: 10px;
+    overflow-x: auto;
+    /* align-items: flex-end; */
+    /* justify-items: end; */
+    /* scrollbar-color: rgb(248, 0, 0); */
+    /* scrollbar-width: 50px !important; */
+}
+.home .body .taskcard{
+    background-color: #d5dfff;
+    color: #000000;
+    /* font-size: 50px; */
+    height: 110px;
+    width: 110px;
+    border: 1px solid #f7f7f7d7;
+    margin: 20px 0px;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    /* overflow: hidden; */
+    position: relative;
+    /* overflow-y: hidden; */
+    /* overflow-x: hidden; */
+    /* overflow: hidden; */
+}
+.home .body .taskcard .text{
+    color: #fff;
+    font-size: 20px;
+    font-family: sofia;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: #003cff;
+    padding: 10px;
+    border-radius: 0px 0px 5px 5px;
+}
+.home .body .taskcard .percent{
+    font-size: 30px;
+    color: #000000;
+    width: 100%;
+    font-family: head2;
+    text-align: center;
+    padding-top: 20px;
+
+}
+.home .body .blogs h1{
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: #00155c;
+    text-transform: capitalize;
+}
+.home .body .taskcard .plus{
+    color: #fff;
+    width: 30px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.home .body .taskcard:nth-child(1){
+    background-image: linear-gradient(to bottom, rgba(196, 196, 196, 0.562) 50%, #000000 0%);
+    
+}
+.taskcard:nth-child(1) .content{
+    color: #fff;
+    font-family: head1;
+    font-size: 13px;
+    /* line-height: 13px; */
+    position: absolute;
+    bottom: 0px;
+    padding: 5px;
+    text-align: center;
+    text-transform: capitalize;
+    /* transform: translateY(100%); */
+}
+.home .taskcards .taskcard.more{
+    background-color: #5a5a5a56;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.home .taskcards .taskcard .arrow{
+    color: #000000;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(50%,50%); */
+    height: 55px;
+    width: 55px;
+}
+.home .taskcards .taskcard.more .content{
+    /* position: absolute; */
+    color: #fff;
+    font-family: sofia;
+    bottom: 0px;
+    padding: 3px;
+    font-size: 18px;
+    /* display: block; */
+    /* margin: auto; */
+    width: 100%;
+    text-align: center;
+
+
+}

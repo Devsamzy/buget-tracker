@@ -1,0 +1,30 @@
+*{
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: sofia;
+  src: url(./assets/SofiaSans-Regular.ttf);
+}
+@font-face {
+  font-family: head1;
+  src: url(./assets/Campton-LightDEMO.otf);
+}
+@font-face {
+  font-family: head2;
+  src: url(./assets/CodecPro-Regular.ttf);
+}
+html{
+  width: 100vw;
+  overflow-x: hidden;
+}
+:root{
+  --green: #00B839;
+  /* --green: #58BA64; */
+  --dark: #dfffe3;
+  /* --light: #0a0b18; */
+  --light: #dfffe3;
+  --darkb: #011947;
+  
+}
