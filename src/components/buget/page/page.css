@@ -230,3 +230,24 @@
     position: absolute;
     background: red;
 }
+.NA{
+    text-align: center;
+    padding: 30px;
+
+}
+.NA p{
+    font-size: 20px;
+    /* color: var(--green); */
+}
+.NA .hour{
+    animation: 3s turn ease infinite;
+    /* animation-delay: -3s; */
+}
+@keyframes turn {
+    0%,100%{
+        transform: rotate(-1deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+}

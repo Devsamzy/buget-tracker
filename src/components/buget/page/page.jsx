@@ -9,9 +9,9 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import './page.css';
 import { FaShirt,FaCar, FaDeleteLeft, FaDelicious, FaTrash, FaHouse,FaRegTrashCan, FaMoneyBill, FaMoneyBills, FaMoneyBillWave, FaMoneyBill1, FaLandMineOn } from 'react-icons/fa6';
 // import { FiTrash } from 'react-icons/fi';
-import { FaGift, FaPlus, FaPizzaSlice, FaMoneyBillAlt } from 'react-icons/fa';
+import { FaGift, FaPlus, FaPizzaSlice, FaMoneyBillAlt, FaTools, FaSmile, FaClock } from 'react-icons/fa';
 // import Side from "../side/side";
-import { MdDelete } from 'react-icons/md';
+import { MdBuild, MdDelete, MdHourglassEmpty, MdHourglassFull, MdHourglassTop, MdOutlineHourglassBottom, MdOutlineHourglassFull, MdOutlineHourglassTop } from 'react-icons/md';
 const imageSource={
   "shopping":<FaShirt className='img'/>,
   "food":<FaPizzaSlice className='img'/>,
@@ -88,6 +88,8 @@ const Page = ({newbudget,removeBudgetItem}) => {
         <li><div className='imgbg' style={{"--bg":"red"}} ><FaShirt className='img shirt'></FaShirt> </div><div className="info"><div className="head">Shopping</div><div className="source">Cash</div></div> <div className="pricelist"><div className="head">{newbudget.expense}</div><div className="percent">35%</div></div></li>
         <li><div className='imgbg' style={{"--bg":"blue"}}><FaGift className='img gift'></FaGift></div> <div className="info"><div className="head">Shopping</div><div className="source">Cash</div></div> <div className="pricelist"><div className="head">468.50</div><div className="percent">35%</div></div></li>
         <li><div className='imgbg' style={{"--bg":"green"}}><FaPizzaSlice className='img pizza'></FaPizzaSlice></div> <div className="info"><div className="head">Shopping</div><div className="source">Cash</div></div> <div className="pricelist"><div className="head">468.50</div><div className="percent">35%</div></div></li> */}
+          {pageno===0&&(
+
         <div className="details">
 
           {/* display budget entries */}
@@ -104,7 +106,7 @@ const Page = ({newbudget,removeBudgetItem}) => {
           </div>
             <div className="info">
               <div className="head">{entry.category}</div>
-              <div className="source">{entry.id}</div>
+              <div className="source">{new Date(entry.id*1000).toLocaleString()}</div>
             </div>
                <div className="pricelist">
                 <div className="pricesec">
@@ -126,11 +128,23 @@ const Page = ({newbudget,removeBudgetItem}) => {
         
         </div>
       )}
-
-
-
         </div>
-        {/* {newbuget} */}
+
+)}
+{pageno===1&&(
+  <div className='NA'>
+    <MdOutlineHourglassTop size={31} className='hour'></MdOutlineHourglassTop>
+  <p className=''>Coming Soon...</p>
+  </div>
+)}
+{pageno===2&&(
+  <div className='NA'>
+    <MdHourglassTop size={31} className='hour'></MdHourglassTop> 
+  <p className=''>Coming Soon...</p>
+  </div>
+)}
+
+
 
       </div>
       

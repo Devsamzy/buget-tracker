@@ -289,21 +289,19 @@ import { FaArrowRightToBracket } from 'react-icons/fa6';
 const closeadd=()=>{
   document.querySelector(".addpage").style.display="none";
 }
-const openadd=()=>{
-  document.querySelector(".addpage").style.display="flex";
-}
-  const clear=()=>{
-    setPrice((prev)=>prev.slice(0,-1))
-  }
 const BudgetApp = () => {
+  const [category, setCategory] = useState("");
+  const [amount, setAmount] = useState("");
+
+  const clear=()=>{
+    setAmount((prev)=>prev.slice(0,-1))
+  }
   // Load from localStorage or initialize as empty array
   const [newbudget, setNewbudget] = useState(() => {
     const savedData = localStorage.getItem("budgetData");
     return savedData ? JSON.parse(savedData) : [];
   });
   // const [pageno,setPageno]=useState(0);
-  const [category, setCategory] = useState("");
-  const [amount, setAmount] = useState("");
   
   const disp = (value)=> {
   setAmount((prev) =>prev + value);
@@ -341,7 +339,7 @@ console.log(newbudget);
   return (
     <>
     <main>
-    <section>
+    <section className="budgetpage">
 
        <div className="addpage">
 
@@ -376,14 +374,14 @@ console.log(newbudget);
                          <button className='no' onClick={()=>disp("9")}>9</button>
                          <button className='big' onClick={addBudget}><FaArrowRight></FaArrowRight></button>
                          <button className='no' onClick={()=>disp("$")}>$</button>
-                         <button className='no' onClick={()=>disp("1")}>0</button>
-                         <button className='no' onClick={()=>disp("1")}>,</button>
+                         <button className='no' onClick={()=>disp("0")}>0</button>
+                         <button className='no' onClick={()=>disp("00")}>00</button>
                      </div>
                  </div>
              </div> 
       <div className="budget">
-      <Header newbudget={newbudget}></Header>
-      <Page newbudget={newbudget} removeBudgetItem={removeBudgetItem}></Page>
+      <Header newbudget={newbudget} className='header'></Header>
+      <Page newbudget={newbudget} removeBudgetItem={removeBudgetItem} className='pages'></Page>
       </div>
     </section>
     </main>
