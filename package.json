@@ -1,5 +1,9 @@
 {
   "name": "reac",
+<<<<<<< HEAD
+=======
+  "homepage": ".",
+>>>>>>> d9f89f335d8b6caefae9b3b7dd215c17d9c77755
   "private": true,
   "version": "0.0.0",
   "type": "module",
